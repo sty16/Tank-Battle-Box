@@ -1,0 +1,8 @@
+﻿  pch.cpp
+  dllmain.cpp
+    正在创建库 E:\Thu学习\Thu学习\大四下\数据库\大作业\DLL_SendMessage\SendGameMessage\Release\SendGameMessage.lib 和对象 E:\Thu学习\Thu学习\大四下\数据库\大作业\DLL_SendMessage\SendGameMessage\Release\SendGameMessage.exp
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 228 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  SendGameMessage.vcxproj -> E:\Thu学习\Thu学习\大四下\数据库\大作业\DLL_SendMessage\SendGameMessage\Release\SendGameMessage.dll

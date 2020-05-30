@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}数据库设计背景}{2}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}设计主题}{2}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}数据流图}{2}{subsection.1.2}% 
+\contentsline {section}{\numberline {2}ER图设计说明}{3}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}实体关系模型设计}{3}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}各表属性与约束设计}{3}{subsection.2.2}% 
+\contentsline {section}{\numberline {3}数据库操作说明}{5}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}基本的增删改查}{5}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}复杂查询语句与视图}{6}{subsection.3.2}% 
+\contentsline {section}{\numberline {4}可视化界面说明}{8}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}代码简单说明}{8}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}操作步骤和功能}{8}{subsection.4.2}% 

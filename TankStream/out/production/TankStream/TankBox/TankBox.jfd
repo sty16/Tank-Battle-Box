@@ -1,0 +1,140 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"$sizePolicy": 1
+			"$locationPolicy": 1
+			"visible": true
+			"title": "Tank Battle盒子"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 1
+				"rows": 4
+				"vgap": 20
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": "登录"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button2"
+					"text": "注册"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2ActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button3"
+					"text": "我的战绩"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button3ActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button4"
+					"text": "坦克大数据"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button4ActionPerformed", true ) )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "West"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space ::146:x, par l {comp label2::t:p:73:p, comp label1:::p:75:p}, space u:::p, par l:::p {comp passwordField1::::369:x, comp textField1::::369:x}, space :p:57:p}, seq {par l {seq {space :p:159:p, comp button5:::p:285:p}, seq l {space :p:153:p, comp label3:::p:341:p}}, space ::165:x}}"
+				"$verticalGroup": "par l {seq l {space :p:27:p, comp label3:::p:75:p, space :p:58:p, par b {comp textField1::b:p:45:p, comp label1::b:p:45:p}, space u:::p, par b {comp passwordField1::b:p:45:p, comp label2::b:p:44:p}, space :p:45:p, comp button5:::p:67:p, space ::78:x}}"
+			} ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField1"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "用户名："
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "密码："
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+				} )
+				add( new FormComponent( "javax.swing.JPasswordField" ) {
+					name: "passwordField1"
+					"font": new java.awt.Font( "Monospaced", 0, 16 )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button5"
+					"text": "登录"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 28 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button5ActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "Tank Battle用户登录"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 30 )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 755, 485 )
+		} )
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :p:95:p, par l {seq {par l {comp label4:::p:98:p, comp label5::l:p:67:p, comp label7::l:p:124:p}, space :0:0:x}, comp label6:::::x}, space :::p, par l {seq {comp textField3:::p:285:p, space :0:149:x}, seq {par l {comp passwordField3:::p:285:p, par t:::p {comp passwordField2::l::285:x, comp textField2::l::285:x}}, space :::x}}}, seq {par l {seq {space :p:153:p, comp label8:::p:297:p}, seq l {space :p:152:p, comp button6:::p:300:p}}, space ::208:x}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp label8:::p:51:p, space :p:24:p, par b {comp textField2::b:p:44:p, comp label4::b:p:34:p}, space s:::p, par b {comp passwordField2::b:p:43:p, comp label5::b:p:33:p}, space s:::p, par b {comp passwordField3::b:p:44:p, comp label6::b:p:29:p}, space :p:35:p, par b {comp label7::b:p:30:p, comp textField3::b:p:43:p}, space ::43:x, comp button6:::p:48:p, space :p:47:p}}"
+		} ) {
+			name: "panel3"
+			"preferredSize": new java.awt.Dimension( 624, 453 )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "用户名："
+				"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "密码："
+				"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": "确认密码："
+				"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": "绑定游戏昵称："
+				"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+				"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JPasswordField" ) {
+				name: "passwordField2"
+				"font": new java.awt.Font( "Monospaced", 0, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JPasswordField" ) {
+				name: "passwordField3"
+				"font": new java.awt.Font( "Monospaced", 0, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField3"
+				"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label8"
+				"text": "Tank Battle用户注册"
+				"font": new java.awt.Font( "Microsoft YaHei UI", 0, 28 )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button6"
+				"text": "注册"
+				"font": new java.awt.Font( "Microsoft YaHei UI", 0, 28 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button6ActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 100, 550 )
+			"size": new java.awt.Dimension( 660, 464 )
+		} )
+	}
+}

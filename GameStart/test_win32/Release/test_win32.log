@@ -1,0 +1,8 @@
+﻿  BaseAPI.cpp
+  test_win32.cpp
+E:\Thu学习\Thu学习\大四下\数据库\大作业\GameStart\test_win32\test_win32.cpp(34,46): warning C4244: “参数”: 从“DWORD”转换到“WORD”，可能丢失数据
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 170 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  test_win32.vcxproj -> E:\Thu学习\Thu学习\大四下\数据库\大作业\GameStart\Release\GameStart.exe

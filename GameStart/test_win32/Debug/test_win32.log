@@ -1,0 +1,3 @@
+﻿  test_win32.cpp
+E:\Thu学习\Thu学习\大四下\数据库\大作业\GameStart\test_win32\test_win32.cpp(34,46): warning C4244: “参数”: 从“DWORD”转换到“WORD”，可能丢失数据
+  test_win32.vcxproj -> E:\Thu学习\Thu学习\大四下\数据库\大作业\GameStart\Debug\GameStart.exe
