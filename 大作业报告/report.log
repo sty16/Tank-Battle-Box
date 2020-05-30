@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.12.27)  30 MAY 2020 21:58
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.12.27)  30 MAY 2020 23:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -914,6 +914,21 @@ LaTeX Warning: Label `tab:userbind' multiply defined.
 
 LaTeX Warning: Label `fig:damage' multiply defined.
 
+
+LaTeX Warning: Label `fig:subfig11' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:subfig11' multiply defined.
+
+
+LaTeX Warning: Label `fig:subfig22' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:subfig22' multiply defined.
+
+
+LaTeX Warning: Label `fig:chap3:logreg' multiply defined.
+
 )
 \openout1 = `report.aux'.
 
@@ -1148,27 +1163,52 @@ Package fontspec Info: Font family '华文仿宋(0)' created for font '华文仿
  [5] [6] [7]
 File: figure/userresult.png Graphic file (type bmp)
 <figure/userresult.png>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 332.
  [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 332.
+File: figure/regis.png Graphic file (type bmp)
+<figure/regis.png>
+File: figure/login.png Graphic file (type bmp)
+<figure/login.png>
+File: figure/realtimeDamage.png Graphic file (type bmp)
+<figure/realtimeDamage.png>
+File: figure/todayresult.png Graphic file (type bmp)
+<figure/todayresult.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figure/total.png Graphic file (type bmp)
+<figure/total.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9]
+File: figure/code.png Graphic file (type bmp)
+<figure/code.png>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 439.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10] [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 439.
  (./report.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 332.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 332.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 439.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 439.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 91464B06595C0FE5D33C265B073D4110.
+(rerunfilecheck)             Checksum: DD2E5A0836911BD4BBC45951AA6EEE15.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 332.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 439.
  ) 
 Here is how much of TeX's memory you used:
- 30410 strings out of 492922
- 584707 string characters out of 6136750
- 948728 words of memory out of 5000000
- 34116 multiletter control sequences out of 15000+600000
+ 30499 strings out of 492922
+ 586044 string characters out of 6136750
+ 950014 words of memory out of 5000000
+ 34199 multiletter control sequences out of 15000+600000
  566872 words of font info for 151 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  54i,12n,79p,805b,1491s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report.pdf (8 pages).
+Output written on report.pdf (11 pages).

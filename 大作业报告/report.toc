@@ -9,4 +9,5 @@
 \contentsline {subsection}{\numberline {3.2}复杂查询语句与视图}{6}{subsection.3.2}% 
 \contentsline {section}{\numberline {4}可视化界面说明}{8}{section.4}% 
 \contentsline {subsection}{\numberline {4.1}代码简单说明}{8}{subsection.4.1}% 
-\contentsline {subsection}{\numberline {4.2}操作步骤和功能}{8}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.2}操作步骤和功能}{9}{subsection.4.2}% 
+\contentsline {section}{\numberline {5}提交文件说明}{10}{section.5}% 

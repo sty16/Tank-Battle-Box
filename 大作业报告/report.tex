@@ -218,7 +218,8 @@ WHERE nickname = '空降皇后无情'
 \end{lstlisting}
 
 \subsection{复杂查询语句与视图}
-游戏数据实时写入数据库均通过底层的API调用自动完成，数据库的复杂操作主要针对坦克数据查询以及用
+游戏数据实时写入数据库均通过底层的API调用自动完成，截至目前，数据库已经导入近六万条数据。
+数据库的复杂操作主要针对坦克数据查询以及用
 户数据查询，现将主要功能列举如下：
 
 1)使用battleDamage数据查询PVP模式下各种坦克的暴击率，并按照降序排列取前20名，其中damageKind为9表示暴击，1为普通攻击。
@@ -326,7 +327,113 @@ ORDER BY `usingtimes` desc;
   \end{figure}
 
 \section{可视化界面说明}
+
+图\ref{fig:code}所示为JAVA GUI界面的代码文件树状图。lib目录为java所需要的的外部库，如JDBC等。
+resource文件夹为GUI界面所需要使用的图片。src文件夹为界面的java源码。
+
+对于接收到的游戏数据总共设计了三个类，BattleResult.java、Damage.java、TankInfo.java分别对应坦克基本信息，
+战斗中的单发伤害信息，战斗结果信息，这三个类将接收到的字符串转化为相应的java对象。MysqlAPI.java完成数据库服务器的连接，
+并提供将得到的游戏数据写入到数据库的函数接口。DrawDamage.java对接收到的实时伤害数据做一个动态的显示。ServerProxy.java
+对本地端口进行监听，当接收到游戏进程发送过来的数据后，做进一步的处理。TankBox.java为基本的登录注册界面。TankBoxUserPanel.java
+为用户登录后的功能界面，如查看今日战绩、实时伤害数据、全服坦克大数据。
 \subsection{代码简单说明}
 
+ServerProxy.java是一切数据处理的起点，部分核心代码如下，改段代码为当有端口有数据写入后，首先根据数据类型做分类，
+然后发送到不同的case中去执行，有的直接存入数据库，有的则还进行实时显示。
+\begin{lstlisting}[style=A]
+  while((temp = bw.readLine())!= null)
+            {
+                try{
+                    if(temp != null){
+                        String[] result = temp.split(",", 2);
+                        switch (result[0]){
+                            case "3":
+                                BattleResult br = new BattleResult(temp);
+                                if(br.mKind != -1) {
+                                    MysqlAPI.addBattleResult(br);
+                                }
+                                break;
+                            case "1":
+                            case "5":
+                                TankBoxUserPanel.drawDamage.PushString(temp);
+                                TankBoxUserPanel.drawDamage.repaint();
+                                TankBoxUserPanel.drawDamage.updateUI();
+                                Damage damage = new Damage(temp);
+                                if(damage.mAttackerKind != -1){
+                                    MysqlAPI.addBattleDamage(damage);
+                                }
+                                break;
+                            case "6":
+                                TankInfo tankinfo = new TankInfo(temp);
+                                if(tankKinds.contains(Integer.valueOf(tankinfo.tankKind))){
+                                    break;
+                                }else{
+                                    MysqlAPI.addTankInfo(tankinfo);
+                                }
+                            default:
+                                break;
+                        }
+                    }
+\end{lstlisting}
+
 \subsection{操作步骤和功能}
+1)注册登录
+  \begin{figure}[h]
+    \centering
+    \subcaptionbox{注册界面\label{fig:subfig11}}
+        {\includegraphics[width=0.45\textwidth]{regis.png}}
+    \hspace{0.05\textwidth}
+    \subcaptionbox{登录界面\label{fig:subfig22}}
+        {\includegraphics[width=0.45\textwidth]{login.png}}
+    \caption{软件注册登录界面}
+    \label{fig:chap3:logreg}
+  \end{figure}
+
+2)实时伤害显示，绿色为友军坦克名称，红色为敌军，后面为伤害与伤害类型。
+  \begin{figure}[h]
+    \centering
+    \subcaptionbox{实时伤害数据\label{fig:subfig11}}
+        {\includegraphics[width=0.45\textwidth]{realtimeDamage.png}}
+    \hspace{0.05\textwidth}
+    \subcaptionbox{我的今日战绩\label{fig:subfig22}}
+        {\includegraphics[width=0.45\textwidth]{todayresult.png}}
+    \caption{用户登录后界面}
+    \label{fig:chap3:logreg}
+  \end{figure}
+
+3)我的今日战绩，基于坦克战斗结果表与当前用户绑定玩家信息，对该玩家本日的战斗数据做统计分析，包含不同坦克场均伤害、出战场次、胜率信息。
+
+
+4)全服坦克大数据，基于伤害表与战斗结果表，我们统计了全服坦克大数据信息包含暴击率、命中率、击穿率、单发平均伤害、 单发最高伤害、坦克胜率、存活率、 单场伤害、场均伤害、单场承受伤害、场均承受伤害、场均被击中次数、场均击毁敌人数等。
+ \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{total.png}
+    \caption{全服坦克大数据}
+    \label{fig:total}
+  \end{figure}
+
+
+\section{提交文件说明}
+
+TankStream文件夹为JAVA可视化界面代码
+
+GameStart文件夹为基于Windows API的游戏启动exe代码，避免游戏官方启动器的DLL文件效验。
+
+DLL\_SendMessage文件夹为编写的基于socket通信的DLL
+
+大作业报告文件夹包含了报告与报告的tex源文件
+
+TankBattle.pptx为展示PPT
+
+CreateTable.sql与Select.sql为建表与查询的SQL语句
+
+坦克大战源码分析.md为对游戏源码反编译后修改的记录
+
+整个项目的github地址:\url{https://github.com/sty16/Tank-Battle-Box}
+ \begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{code.png}
+    \caption{java可视化界面文件说明}
+    \label{fig:code}
+  \end{figure}
 \end{document}
